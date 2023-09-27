@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
 
     public float MAX_SPEED = 7;
     public float X_ACCEL = 90;
@@ -35,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
 
     private int counter = 0;
 
+    private void Awake()
+    {
+        instance = this;    
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -95,8 +100,7 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector2.up * JUMP_FORCE);
         can_jump = false;
 
-        counter++;
-        PrintCounter();
+        
 
 
     }
@@ -154,6 +158,10 @@ public class PlayerMovement : MonoBehaviour
         can_jump = true;
     }
 
+    public float GetSpeed()
+    {
+        return rb.velocity.magnitude;
+    }
 
 
     private void PrintCounter()
