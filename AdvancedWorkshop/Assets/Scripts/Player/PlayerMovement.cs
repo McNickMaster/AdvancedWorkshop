@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 movementMod = Vector2.one; //misc modifier
 
+
     //inputs
     private float input_x;
     private bool input_jump;

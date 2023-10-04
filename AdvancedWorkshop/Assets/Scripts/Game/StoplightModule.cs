@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoplightModule : MonoBehaviour
 {
+    public Image stoplightImage;
     public Color state = Color.green;
     public float[] timings = new float[3] { 6f, 1f, 2f };
     public float speed_threshold = 0.1f;
@@ -60,17 +62,20 @@ public class StoplightModule : MonoBehaviour
     void Red()
     {
         state = Color.red;
+        stoplightImage.color = state;
         tracking_active = true;
     }
 
     void Yellow()
     {
         state = Color.yellow;
+        stoplightImage.color = state;
     }
 
     void Green()
     {
         state = Color.green;
+        stoplightImage.color = state;
 
         tracking_active = false;
     }
