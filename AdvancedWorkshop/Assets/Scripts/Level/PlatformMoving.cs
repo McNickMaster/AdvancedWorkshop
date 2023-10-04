@@ -36,20 +36,4 @@ public class PlatformMovement : MonoBehaviour
         // Apply the new position to the platform.
         transform.position = newPosition;
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-if (other.tag=="Player")
-            {
-            other.transform.SetParent(transform);
-            Debug.Log("moving platform");
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag=="Player")
-        {
-            other.transform.SetParent(null);
-        }
-    }
 }
