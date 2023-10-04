@@ -6,14 +6,7 @@ public class RespawnAtCheckpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Check if the player has a PlayerController script.
-            PlayerController playerController = other.GetComponent<PlayerController>();
-
-            if (playerController != null)
-            {
-                // Respawn the player at the last checkpoint.
-                playerController.RespawnAtLastCheckpoint();
-            }
+            GameManager.Instance.RespawnPlayer();
         }
     }
 }
