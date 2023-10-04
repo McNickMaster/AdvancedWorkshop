@@ -20,14 +20,16 @@ public class PlayerAnimation : MonoBehaviour
         if(PlayerMovement.instance.rb.velocity.x < 0)
         {
             lookingLeft = true;
+            sprite.flipX = lookingLeft;
         }
 
         if (PlayerMovement.instance.rb.velocity.x > 0)
         {
-            lookingLeft = false;
+            lookingLeft = false; 
+            sprite.flipX = lookingLeft;
         }
 
-
+        
 
     }
 
