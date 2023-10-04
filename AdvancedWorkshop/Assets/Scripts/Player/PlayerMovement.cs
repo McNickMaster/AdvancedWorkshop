@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 movementMod = Vector2.one; //misc modifier
 
+
     //inputs
     private float input_x;
     private bool input_jump;
@@ -121,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         float g = GRAVITY; //flat grav
         g *= is_falling ? GRAVITY_FALL_MOD : 1; //fall faster on the descend (it feels better)
         g *= movementMod.y; //for fastfall
+        g *= Time.fixedDeltaTime;
         return g;
     }
 
