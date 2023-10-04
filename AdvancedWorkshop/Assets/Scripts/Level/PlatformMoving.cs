@@ -37,11 +37,11 @@ public class PlatformMovement : MonoBehaviour
         transform.position = newPosition;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
 if (other.tag=="Player")
             {
-            other.transform.SetParent(transform);
+            other.transform.parent.SetParent(transform);
             Debug.Log("moving platform");
         }
     }
@@ -49,7 +49,7 @@ if (other.tag=="Player")
     {
         if (other.tag=="Player")
         {
-            other.transform.SetParent(null);
+            other.transform.parent.SetParent(null);
         }
     }
     private void FixedUpdate()
