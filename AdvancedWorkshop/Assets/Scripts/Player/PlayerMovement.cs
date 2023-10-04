@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         float g = GRAVITY; //flat grav
         g *= is_falling ? GRAVITY_FALL_MOD : 1; //fall faster on the descend (it feels better)
         g *= movementMod.y; //for fastfall
-        g *= Time.fixedDeltaTime;
+        g *= Time.deltaTime;
         return g;
     }
 
