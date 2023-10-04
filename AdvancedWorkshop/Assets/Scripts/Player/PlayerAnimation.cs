@@ -20,14 +20,16 @@ public class PlayerAnimation : MonoBehaviour
         if(PlayerMovement.instance.rb.velocity.x < 0)
         {
             lookingLeft = true;
+            sprite.transform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (PlayerMovement.instance.rb.velocity.x > 0)
         {
-            lookingLeft = false;
+            lookingLeft = false; 
+            sprite.transform.localScale = new Vector3(1, 1, 1);
         }
 
-
+        
 
     }
 

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 lastCheckpointPosition; // Store the position of the last checkpoint.
     private bool isDead = false; // Flag to track whether the player is dead.
 
-    private void Start()
+    private void Awake()
     {
         // Initialize the last checkpoint position to the initial spawn point.
         lastCheckpointPosition = respawnPoint.position;
@@ -49,9 +49,9 @@ public class PlayerController : MonoBehaviour
     }
 
     // Call this method when the player reaches a checkpoint.
-    public void SetCheckpoint(Transform checkpoint)
+    public void SetCheckpoint(Vector3 checkpoint)
     {
         // Update the last checkpoint position.
-        lastCheckpointPosition = checkpoint.position;
+        lastCheckpointPosition = checkpoint;
     }
 }
