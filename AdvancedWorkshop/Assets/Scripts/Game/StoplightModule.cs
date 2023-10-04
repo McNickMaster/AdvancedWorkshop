@@ -14,6 +14,7 @@ public class StoplightModule : MonoBehaviour
     private float timer = 0;
     private float cycleTime = 0.0f;
 
+    [SerializeField]
     private bool tracking_active;
 
     private void Awake()
@@ -35,16 +36,29 @@ public class StoplightModule : MonoBehaviour
         if(timer >= cycleTime)
         {
             timer = 0;
-            Green();
+            if(state != Color.green)
+            {
+                Green();
+            }
         } else if(timer >= cycleTime - timings[2])
         {
-            Red();
+            if (state != Color.red)
+            {
+                Red();
+            }
         } else if (timer >= cycleTime - timings[1] - timings[2])
         {
-            Yellow();
+
+            if (state != Color.yellow)
+            {
+                Yellow();
+            }
         } else
         {
-            Green();
+            if (state != Color.green)
+            {
+                Green();
+            }
         }
 
 
@@ -52,11 +66,24 @@ public class StoplightModule : MonoBehaviour
         {
             if(PlayerMovement.instance.GetSpeed() >= speed_threshold)
             {
+                state = Color.red;
+                stoplightImage.color = state;
+
+
                 tracking_active = false;
+                //RespawnPlayer();
+                Invoke("RespawnPlayer", 0.5f);
+                
                 Debug.Log("player has been detected, respawning at checkpoint...");
             }
         }
 
+    }
+
+    void RespawnPlayer()
+    {
+        GameManager.Instance.RespawnPlayer();
+        timer = 0;
     }
 
     void Red()

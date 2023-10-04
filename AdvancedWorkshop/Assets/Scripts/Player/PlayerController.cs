@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Transform respawnPoint; // Reference to the initial spawn point.
+    public static PlayerController instance;
 
     private Vector3 lastCheckpointPosition; // Store the position of the last checkpoint.
     private bool isDead = false; // Flag to track whether the player is dead.
 
     private void Awake()
     {
+        instance = this; 
         // Initialize the last checkpoint position to the initial spawn point.
-        lastCheckpointPosition = respawnPoint.position;
+    }
+
+    private void Start()
+    {
+
+        lastCheckpointPosition = PlayerMovement.instance.transform.position;
     }
 
     private void Update()
@@ -33,7 +39,7 @@ public class PlayerController : MonoBehaviour
         // Set the player's position to the last checkpoint position.
         transform.position = lastCheckpointPosition;
 
-        // Reset any additional player state, health, or other variables as needed.
+        PlayerMovement.instance.rb.velocity = Vector3.zero;
 
         // Set isDead to false to indicate that the player is no longer dead.
         isDead = false;

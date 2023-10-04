@@ -32,8 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        player.SetCheckpoint(lastCheckpointPosition);
-        player.RespawnAtLastCheckpoint();
+        PlayerController.instance.SetCheckpoint(lastCheckpointPosition);
+        PlayerController.instance.RespawnAtLastCheckpoint();
     }
 }
