@@ -50,6 +50,7 @@ if (other.tag=="Player")
         if (other.tag=="Player")
         {
             other.transform.parent.SetParent(null);
+            Debug.Log("Player exited platform");
         }
     }
     private void FixedUpdate()
