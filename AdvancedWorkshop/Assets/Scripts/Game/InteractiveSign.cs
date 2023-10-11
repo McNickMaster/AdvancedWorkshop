@@ -13,7 +13,7 @@ public class InteractiveSign : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.name == "PlayerSprite")
         {
             TurnOnMessage();
         }
