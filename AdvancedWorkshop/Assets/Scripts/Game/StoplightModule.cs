@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StoplightModule : MonoBehaviour
 {
     public Image stoplightImage;
-    public Image[] stoplightImages = new Image[3];
+    public Sprite[] stoplightImages = new Sprite[3];
     public Color state = Color.green;
     public float[] timings = new float[3] { 6f, 1f, 2f };
     public float speed_threshold = 0.1f;
@@ -68,7 +68,7 @@ public class StoplightModule : MonoBehaviour
             if(PlayerMovement.instance.GetSpeed() >= speed_threshold)
             {
                 state = Color.red;
-                stoplightImage.color = state;
+                //stoplightImage.color = state;
 
 
                 tracking_active = false;
@@ -90,25 +90,25 @@ public class StoplightModule : MonoBehaviour
     void Red()
     {
         state = Color.red;
-        stoplightImage.color = state;
+        //stoplightImage.color = state;
         tracking_active = true;
-        //stoplightImage = stoplightImages[2];
+        stoplightImage.sprite = stoplightImages[2];
     }
 
     void Yellow()
     {
         state = Color.yellow;
-        stoplightImage.color = state;
-        //stoplightImage = stoplightImages[1];
+        //stoplightImage.color = state;
+        stoplightImage.sprite = stoplightImages[1];
     }
 
     void Green()
     {
         state = Color.green;
-        stoplightImage.color = state;
+        //stoplightImage.color = state;
 
         tracking_active = false;
 
-        //stoplightImage = stoplightImages[0];
+        stoplightImage.sprite = stoplightImages[0];
     }
 }
