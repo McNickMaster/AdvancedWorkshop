@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     //inputs
     private float input_x;
+    [SerializeField]
     private bool input_jump;
     private bool input_down;
 
@@ -31,8 +35,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private bool is_falling, is_grounded, can_jump, coyote = false, last_grounded = false;
 
-    
+
     //modules
+    public PlayerInput input;
+    public InputAction moveAction, jumpAction, downAction;
     public Rigidbody2D rb;
     public Transform groundCheckTL, groundCheckBR;
 
@@ -45,7 +51,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;    
+        instance = this;
+        input.SwitchCurrentActionMap("Player");
+
+        InitInputs();
     }
 
     // Start is called before the first frame update
@@ -74,8 +83,17 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void GetInput()
+    void InitInputs()
     {
+
+        jumpAction.performed += context => OnJumpInput(context);
+        downAction.started += context => OnDownInput(context);
+        downAction.canceled += context => OnDownInput(context);
+    }
+
+    void GetInput_old()
+    {
+        /*
         input_x = Input.GetAxis("Horizontal");
         input_down = Input.GetKey(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
 
@@ -85,6 +103,33 @@ public class PlayerMovement : MonoBehaviour
             input_jump = true;
             Invoke("ResetJumpPress", JUMP_BUFFER);
         }
+        */
+    }
+
+    void GetInput()
+    {
+        // input_x = input.actions.FindAction("Move", true).ReadValue<float>();
+        // input_x = moveAction.ReadValue<float>();
+
+        input_x = moveAction.ReadValue<Vector2>().x;
+
+    }
+
+    void OnJumpInput(InputAction.CallbackContext context)
+    {
+        input_jump = true;
+        Invoke("ResetJumpPress", JUMP_BUFFER);
+    }
+
+    void OnDownInput(InputAction.CallbackContext context)
+    {
+        input_down = context.started;
+    }
+
+    public void HandleMovement(InputAction.CallbackContext context)
+    {
+       // input_x = context.ReadValue<float>();
+        Debug.Log("movement is being handled, dw");
     }
 
     void Move()
@@ -219,6 +264,11 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("counter: " + counter);
     }
 
-
+    public void OnEnable()
+    {
+        moveAction.Enable();
+        jumpAction.Enable();
+        downAction.Enable();
+    }
     
 }
