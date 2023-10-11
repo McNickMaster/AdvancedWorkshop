@@ -2295,26 +2295,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1257269626}
     m_Modifications:
-    - target: {fileID: 2501888304448921103, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501888304448921103, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706958624893714007, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
-      propertyPath: m_Size.y
-      value: 1.4619591
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706958624893714007, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.23575675
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706958624893714007, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2789685910100478900, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5281
@@ -2358,10 +2338,6 @@ PrefabInstance:
     - target: {fileID: 8866936720963769061, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
-      objectReference: {fileID: 0}
-    - target: {fileID: 8866936720963769061, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2768,14 +2744,6 @@ PrefabInstance:
     - target: {fileID: 4576761982398659967, guid: c2453244ecb1575448dabee5390307d3, type: 3}
       propertyPath: m_Name
       value: VerticalPlatform
-      objectReference: {fileID: 0}
-    - target: {fileID: 4931976106399933580, guid: c2453244ecb1575448dabee5390307d3, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4931976106399933580, guid: c2453244ecb1575448dabee5390307d3, type: 3}
-      propertyPath: bottomBoundary
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065790081591722381, guid: c2453244ecb1575448dabee5390307d3, type: 3}
       propertyPath: m_LocalPosition.x
