@@ -13,8 +13,8 @@ public class PlayerAnimation : MonoBehaviour
 
     public float squashStretchOffset = 0.2f;
     private Vector3 targetScale = Vector3.one, currentScale = Vector3.one;
-    private int playerDir = 1;
-    public float squashMod = 20;
+    private float playerDir = 1;
+    public float squashMod = 20, flipMod = 300;
 
     private void Awake()
     {
@@ -30,16 +30,20 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerMovement.instance.rb.velocity.x < 0 && !lookingLeft)
+        if(PlayerMovement.instance.rb.velocity.x < 0)
         {
             lookingLeft = true;
-            playerDir = -1;
+            //playerDir = -1;
+
+            playerDir = Mathf.Lerp(playerDir, -1f, Time.deltaTime * flipMod);
         }
 
-        if (PlayerMovement.instance.rb.velocity.x > 0 && lookingLeft)
+        if (PlayerMovement.instance.rb.velocity.x > 0)
         {
             lookingLeft = false;
-            playerDir = 1;
+            //playerDir = 1;
+
+            playerDir = Mathf.Lerp(playerDir, 1f, Time.deltaTime * flipMod);
         }
 
         UpdateSquashStretch();

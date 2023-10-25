@@ -663,8 +663,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3541534273fdcb949a29065e089bb83b, type: 3}
   state: {r: 1, g: 1, b: 1, a: 1}
   timings:
-  - 8
-  - 1
+  - 9.5
+  - 1.5
   - 2
   speed_threshold: 1
   tracking_active: 0
