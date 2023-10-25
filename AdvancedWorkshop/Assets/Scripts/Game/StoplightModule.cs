@@ -93,6 +93,8 @@ public class StoplightModule : MonoBehaviour
         //stoplightImage.color = state;
         tracking_active = true;
         stoplightImage.sprite = stoplightImages[2];
+
+        PlayerCam.instance.StartShake(timings[2]);
     }
 
     void Yellow()

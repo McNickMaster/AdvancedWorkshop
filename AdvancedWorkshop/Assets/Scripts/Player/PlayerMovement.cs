@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     //flags
     [SerializeField]
-    private bool is_falling, is_grounded, can_jump, coyote = false, last_grounded = false;
+    private bool is_falling, is_grounded = false, can_jump, coyote = false, last_grounded = false;
 
 
     //modules
@@ -149,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
+        PlayerAnimation.instance.Stretch();
         //add force for jump
         rb.AddForce(Vector2.up * JUMP_FORCE);
 
@@ -181,6 +182,23 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, MAX_Y_SPEED);
         }
+    }
+
+    void Landed()
+    {
+        Debug.Log("landed");
+
+        PlayerAnimation.instance.Squash();
+        PlayerCam.instance.StartShake(0.025f);
+
+        Invoke("ResetSquashStretch", 0.05f);
+    }
+
+    void Fell()
+    {
+        Debug.Log("fell");
+ 
+        PlayerAnimation.instance.Stretch();
     }
 
 
@@ -234,6 +252,27 @@ public class PlayerMovement : MonoBehaviour
         {
             
             x = true;
+
+            //if the player wasnt grounded, but is now grounded, they just landed
+            if(!is_grounded)
+            {
+                Landed();
+            }
+
+            if(coyote)
+            {
+                Debug.Log("we coyote but we landed");
+                Landed();
+            }
+
+            
+        } else
+        {
+            //if the player was grounded, didnt jump, but is now airborne, they fell
+            if(is_grounded)
+            {
+                Fell();
+            }
         }
 
         return x;
@@ -250,6 +289,7 @@ public class PlayerMovement : MonoBehaviour
     void ResetGrounded()
     {
         coyote = false;
+        is_grounded = false;
     }
 
     //for spotlight
@@ -262,6 +302,11 @@ public class PlayerMovement : MonoBehaviour
     private void PrintCounter()
     {
         Debug.Log("counter: " + counter);
+    }
+
+    void ResetSquashStretch()
+    {
+        PlayerAnimation.instance.ResetSS();
     }
 
     public void OnEnable()
