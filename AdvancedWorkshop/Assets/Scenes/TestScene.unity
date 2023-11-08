@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 1067809059}
   - component: {fileID: 1067809058}
   - component: {fileID: 1067809060}
+  - component: {fileID: 1067809061}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -1264,7 +1265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523481090073564427, guid: 78bbdfa23feeef2498cdb00a5bb20f72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7523481090073564427, guid: 78bbdfa23feeef2498cdb00a5bb20f72, type: 3}
       propertyPath: m_LocalPosition.z
