@@ -2,53 +2,59 @@ using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
-    [SerializeField] private Transform[] waypoints;
-    [SerializeField] private float speed;
-    [SerializeField] private float checkDistance = 0.05f;
+    public float speed = 5f;         // Speed at which the platform moves.
+    public float leftBoundary = -5f; // Left boundary of movement.
+    public float rightBoundary = 5f; // Right boundary of movement.
 
+    private bool movingRight = true; // Flag to track movement direction.
 
-    private Transform targetWaypoint;
-    private int currentWaypoitIndex = 0;
-
-void Start()
+    private void Update()
     {
-        targetWaypoint = waypoints[0];
-    }
+        // Calculate the platform's new position.
+        Vector3 newPosition = transform.position;
 
-    void Update()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
-
-
-        if (Vector2.Distance(transform.position, targetWaypoint.position) < checkDistance)
+        // Update the position based on the movement direction and speed.
+        if (movingRight)
         {
-            targetWaypoint = GetNextWaypoint();
+            newPosition.x += speed * Time.deltaTime;
+            if (newPosition.x > rightBoundary)
+            {
+                newPosition.x = rightBoundary;
+                movingRight = false;
+            }
         }
+        else
+        {
+            newPosition.x -= speed * Time.deltaTime;
+            if (newPosition.x < leftBoundary)
+            {
+                newPosition.x = leftBoundary;
+                movingRight = true;
+            }
+        }
+
+        // Apply the new position to the platform.
+        transform.position = newPosition;
     }
 
-    private Transform GetNextWaypoint()
-    {
-        currentWaypoitIndex++;
-        if (currentWaypoitIndex >= waypoints.Length)
-        {
-            currentWaypoitIndex = 0;
-        }
-        return waypoints[currentWaypoitIndex];
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
-        {
-            other.transform.parent = transform;
-            Debug.Log("Player on the vertical moving platform.");
+if (other.tag=="Player")
+            {
+            other.transform.parent.SetParent(transform);
+            Debug.Log("moving platform");
         }
     }
-
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag=="Player")
         {
-            other.transform.parent = null;
+            other.transform.parent.SetParent(null);
+            Debug.Log("Player exited platform");
         }
+    }
+    private void FixedUpdate()
+    {
+        
     }
 }
