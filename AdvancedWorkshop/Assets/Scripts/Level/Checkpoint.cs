@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
 
     public Sprite[] sprites;
     public SpriteRenderer spriteRenderer;
+    public ParticleSystem particles;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Checkpoint : MonoBehaviour
         GameManager.Instance.SetCheckpoint(transform.position);
         activated = true;
         spriteRenderer.sprite = sprites[1];
+        particles.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
