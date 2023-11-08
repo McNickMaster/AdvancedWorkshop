@@ -35,4 +35,5 @@ public class GameManager : MonoBehaviour
         PlayerController.instance.SetCheckpoint(lastCheckpointPosition);
         PlayerController.instance.RespawnAtLastCheckpoint();
     }
+
 }

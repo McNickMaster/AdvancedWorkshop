@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class StoplightModule : MonoBehaviour
 {
+    public static StoplightModule instance;
     public Image stoplightImage;
     public Sprite[] stoplightImages = new Sprite[3];
     public Color state = Color.green;
@@ -20,6 +21,7 @@ public class StoplightModule : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         cycleTime = timings[0] + timings[1] + timings[2];
     }
 
@@ -112,5 +114,11 @@ public class StoplightModule : MonoBehaviour
         tracking_active = false;
 
         stoplightImage.sprite = stoplightImages[0];
+    }
+
+    public void Reset()
+    {
+        timer = 0;
+        Green();
     }
 }

@@ -804,6 +804,7 @@ GameObject:
   - component: {fileID: 1067809059}
   - component: {fileID: 1067809058}
   - component: {fileID: 1067809060}
+  - component: {fileID: 1067809061}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -862,6 +863,22 @@ MonoBehaviour:
   - 2
   speed_threshold: 1
   tracking_active: 0
+--- !u!114 &1067809061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067809057}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d02bb1457bb4a34081d9d944528a2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstLevel: 0
+  levelOrder: 000000000100000002000000
+  mainScene:
+    m_Handle: 0
 --- !u!1 &1150179676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523481090073564427, guid: 78bbdfa23feeef2498cdb00a5bb20f72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7523481090073564427, guid: 78bbdfa23feeef2498cdb00a5bb20f72, type: 3}
       propertyPath: m_LocalPosition.z
