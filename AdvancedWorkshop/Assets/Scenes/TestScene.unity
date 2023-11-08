@@ -2508,6 +2508,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3665562631315043620, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8866936720963769061, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
       propertyPath: m_Name
       value: MovingPlatform
@@ -2590,6 +2594,10 @@ PrefabInstance:
     - target: {fileID: 4576761982398659967, guid: c2453244ecb1575448dabee5390307d3, type: 3}
       propertyPath: m_Name
       value: VerticalPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285948611611371318, guid: c2453244ecb1575448dabee5390307d3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8065790081591722381, guid: c2453244ecb1575448dabee5390307d3, type: 3}
       propertyPath: m_LocalPosition.x
