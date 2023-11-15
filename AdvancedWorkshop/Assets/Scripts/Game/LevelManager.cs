@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
     public Level firstLevel;
 
     public Level[] levelOrder;
@@ -16,7 +17,6 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-
         LoadFirstLevel();
     }
 
@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
         LoadLevel(firstLevel);
     }
 
-    void LoadNextLevel()
+    public void LoadNextLevel()
     {
         UnloadLevel(levelOrder[currentLevelIndex]);
         currentLevelIndex++;

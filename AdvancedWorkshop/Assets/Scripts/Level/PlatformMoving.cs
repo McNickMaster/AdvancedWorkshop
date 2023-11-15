@@ -10,7 +10,7 @@ public class PlatformMovement : MonoBehaviour
     private Transform targetWaypoint;
     private int currentWaypoitIndex = 0;
 
-    void Start()
+    void Awake()
     {
         targetWaypoint = waypoints[0];
     }
