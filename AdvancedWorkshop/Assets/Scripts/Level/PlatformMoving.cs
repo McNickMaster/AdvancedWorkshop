@@ -10,7 +10,7 @@ public class PlatformMovement : MonoBehaviour
     private Transform targetWaypoint;
     private int currentWaypoitIndex = 0;
 
-    void Start()
+    void Awake()
     {
         targetWaypoint = waypoints[0];
     }
@@ -37,18 +37,18 @@ public class PlatformMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.layer.Equals(10))
         {
-            other.transform.parent = transform;
+            other.transform.parent.parent = transform;
             Debug.Log("Player on the vertical moving platform.");
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.layer.Equals(10))
         {
-            other.transform.parent = null;
+            other.transform.parent.parent = null;
         }
     }
 }
