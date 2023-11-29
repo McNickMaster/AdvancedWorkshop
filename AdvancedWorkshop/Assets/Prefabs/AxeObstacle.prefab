@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4966021336328216516}
   - component: {fileID: 4077342209628288225}
-  - component: {fileID: 194102220590091741}
   - component: {fileID: 7019483217879742651}
+  - component: {fileID: 5242488894457066412}
   m_Layer: 0
   m_Name: Axe Blade
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 5038393096708228838}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.004380046, y: -0.3559384, z: -0.27000004}
-  m_LocalScale: {x: 0.5031446, y: 0.40704334, z: 1}
+  m_LocalPosition: {x: -0.004380046, y: -0.39592, z: -0.27000004}
+  m_LocalScale: {x: 0.5031446, y: 0.5473227, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 16444758754345255}
@@ -86,8 +86,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &194102220590091741
-BoxCollider2D:
+--- !u!114 &7019483217879742651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038393096708228838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aced3e6a4daa9e8458c852515fa93210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &5242488894457066412
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,30 +131,31 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.15, y: 0.57}
-    newSize: {x: 1.15, y: 0.57}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.15, y: 0.57}
   m_EdgeRadius: 0
---- !u!114 &7019483217879742651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038393096708228838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aced3e6a4daa9e8458c852515fa93210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+  - {x: -0.46156308, y: 0.1948636}
+  - {x: -0.53475744, y: 0.19285709}
+  - {x: -0.5362671, y: 0.08003188}
+  - {x: -0.5065731, y: 0.053485814}
+  - {x: -0.4413201, y: -0.036075726}
+  - {x: -0.35677326, y: -0.11260379}
+  - {x: -0.31288567, y: -0.15349701}
+  - {x: -0.25225136, y: -0.21465768}
+  - {x: -0.16564988, y: -0.25548923}
+  - {x: -0.056410182, y: -0.28424922}
+  - {x: 0.06646722, y: -0.27795425}
+  - {x: 0.16510856, y: -0.25798059}
+  - {x: 0.27461147, y: -0.21035065}
+  - {x: 0.34593087, y: -0.12620634}
+  - {x: 0.42852214, y: -0.06184199}
+  - {x: 0.50710326, y: 0.023949325}
+  - {x: 0.5586767, y: 0.08139271}
+  - {x: 0.5619561, y: 0.19788006}
+  - {x: 0.48316947, y: 0.19739449}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &5550073298500554033
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +186,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -32.57, y: 13.73, z: 0}
-  m_LocalScale: {x: 5.6766973, y: 7.0169435, z: 2.8562}
+  m_LocalScale: {x: 9.793373, y: 9.608248, z: 2.8562}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4966021336328216516}
@@ -274,7 +287,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.00000001576143, y: 0.2500001}
-  m_ConnectedAnchor: {x: -96.67267, y: -71.585106}
+  m_ConnectedAnchor: {x: -105.0135, y: -19.635029}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 100
@@ -296,6 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body2d: {fileID: 0}
-  leftPushRange: -24
-  rightPushRange: 24
+  leftPushRange: -30
+  rightPushRange: 30
   velocityThreshold: 750
