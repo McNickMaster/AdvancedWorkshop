@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 2350617314811281027}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.7, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.0077479, z: 0}
+  m_LocalScale: {x: 4.39375, y: 3.8303125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2789685910100478900}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: fae499052e7c03e40990c12ff26404fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,18 +117,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0027374625}
+  m_Offset: {x: -0.0014041662, y: -0.0043482445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.94, y: 0.15}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.98497057}
+  m_Size: {x: 0.89609003, y: 0.15704751}
   m_EdgeRadius: 0
 --- !u!1 &8866936720963769061
 GameObject:
@@ -158,8 +158,8 @@ Transform:
   m_GameObject: {fileID: 8866936720963769061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.0048494, z: 0}
+  m_LocalScale: {x: 1.5009458, y: 1.8991559, z: 1.2252618}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8832244043113896811}
@@ -241,7 +241,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013008356, y: 0.1041075}
+  m_Offset: {x: -0.00066912174, y: 0.0053930283}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -252,5 +252,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5679693, y: 1.063664}
+  m_Size: {x: 3.6913621, y: 1.0143068}
   m_EdgeRadius: 0
