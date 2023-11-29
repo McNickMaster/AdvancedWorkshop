@@ -26,7 +26,7 @@ public class Checkpoint : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("checkpoint triggered");
-        if (collision.CompareTag("Player") && !activated)
+        if (collision.gameObject.layer.Equals(10) && !activated)
         {
             CheckpointActive();
         }

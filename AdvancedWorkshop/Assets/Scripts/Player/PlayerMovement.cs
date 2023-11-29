@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float COYOTE_TIME = 0.2f; //time to keep the player grounded after they fall off of a ledge
     public float JUMP_BUFFER = 0.2f; //time to buffer the jump input
 
+    public float platformModifier = 5f;
+
     public int groundLayer = 8; //ground layer
 
     private Vector2 movementMod = Vector2.one; //misc modifier
@@ -134,6 +136,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+        
+
+        if(transform.parent == null)
+        {
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        } else
+        {
+            rb.interpolation = RigidbodyInterpolation2D.None;
+        }
         //get accel from input * scalar  * misc modifier
         acceleration = input_x * X_ACCEL * movementMod.x;
 

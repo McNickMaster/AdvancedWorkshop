@@ -37,18 +37,18 @@ public class PlatformMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.layer.Equals(10))
         {
-            other.transform.parent = transform;
+            other.transform.parent.parent = transform;
             Debug.Log("Player on the vertical moving platform.");
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.layer.Equals(10))
         {
-            other.transform.parent = null;
+            other.transform.parent.parent = null;
         }
     }
 }
