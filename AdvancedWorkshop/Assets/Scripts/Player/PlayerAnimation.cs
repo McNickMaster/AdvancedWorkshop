@@ -30,7 +30,7 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerMovement.instance.rb.velocity.x < 0)
+        if(PlayerMovement.instance.rb.velocity.x < -0.1f)
         {
             lookingLeft = true;
             //playerDir = -1;
@@ -38,7 +38,7 @@ public class PlayerAnimation : MonoBehaviour
             playerDir = Mathf.Lerp(playerDir, -1f, Time.deltaTime * flipMod);
         }
 
-        if (PlayerMovement.instance.rb.velocity.x > 0)
+        if (PlayerMovement.instance.rb.velocity.x > 0.1f)
         {
             lookingLeft = false;
             //playerDir = 1;
