@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
 
 public enum Level
 {
-    UNDERGROUND, FARM, MOUNTAIN
+    UNDERGROUND, FARM, PEAK
 
 
 }
