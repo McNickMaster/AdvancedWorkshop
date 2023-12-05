@@ -223,17 +223,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2345263628980250109, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5550073298500554033, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_Name
       value: AxeObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6111998318562120828, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -34.472404
+      value: 149.27896
       objectReference: {fileID: 0}
     - target: {fileID: 6111998318562120828, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 16.949972
+      value: 5.8388853
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
