@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 5743426804926266167}
   - component: {fileID: 2949738802114961074}
   - component: {fileID: 99939776376357418}
-  - component: {fileID: 6726170453683925008}
+  - component: {fileID: 6001767812565753415}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -514,7 +514,7 @@ MonoBehaviour:
   can_jump: 1
   coyote: 0
   last_grounded: 1
-  input: {fileID: 6073180754216457821, guid: 00000000000000000000000000000000, type: 0}
+  input: {fileID: 6001767812565753415}
   moveAction:
     m_Name: Move
     m_Type: 0
@@ -661,7 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f742b00d8d62b6342973739776a0f90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6726170453683925008
+--- !u!114 &6001767812565753415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
