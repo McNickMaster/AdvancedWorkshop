@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4966021336328216516}
   - component: {fileID: 4077342209628288225}
-  - component: {fileID: 194102220590091741}
   - component: {fileID: 7019483217879742651}
+  - component: {fileID: 6863125453603850148}
   m_Layer: 0
   m_Name: Axe Blade
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 5038393096708228838}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.004380046, y: -0.3559384, z: -0.27000004}
-  m_LocalScale: {x: 0.5031446, y: 0.40704334, z: 1}
+  m_LocalPosition: {x: -0.004380046, y: -0.38134, z: -0.27000004}
+  m_LocalScale: {x: 0.5031446, y: 0.49615896, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 16444758754345255}
@@ -86,8 +86,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &194102220590091741
-BoxCollider2D:
+--- !u!114 &7019483217879742651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038393096708228838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aced3e6a4daa9e8458c852515fa93210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &6863125453603850148
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -115,34 +127,49 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012094259, y: -0.0060474575}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.15, y: 0.57}
-    newSize: {x: 1.15, y: 0.57}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0947108, y: 0.5475387}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
---- !u!114 &7019483217879742651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038393096708228838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aced3e6a4daa9e8458c852515fa93210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+  - {x: -0.52865833, y: 0.18990344}
+  - {x: -0.5331989, y: 0.07921665}
+  - {x: -0.5120672, y: 0.043389264}
+  - {x: -0.4638954, y: -0.0216235}
+  - {x: -0.41232193, y: -0.07148}
+  - {x: -0.37141338, y: -0.08032451}
+  - {x: -0.29917425, y: -0.15945092}
+  - {x: -0.2504853, y: -0.21569113}
+  - {x: -0.19110356, y: -0.21271837}
+  - {x: -0.14987448, y: -0.2531141}
+  - {x: -0.06948959, y: -0.25104684}
+  - {x: -0.06840576, y: -0.2789968}
+  - {x: 0.015023176, y: -0.2760438}
+  - {x: 0.07485858, y: -0.2721864}
+  - {x: 0.073115155, y: -0.25553244}
+  - {x: 0.17923804, y: -0.2560451}
+  - {x: 0.17622805, y: -0.23556931}
+  - {x: 0.19515339, y: -0.2327671}
+  - {x: 0.19593063, y: -0.21688734}
+  - {x: 0.26284504, y: -0.212795}
+  - {x: 0.2657683, y: -0.18887086}
+  - {x: 0.29547617, y: -0.1903031}
+  - {x: 0.3106638, y: -0.16496184}
+  - {x: 0.3082097, y: -0.14546067}
+  - {x: 0.33803836, y: -0.14246164}
+  - {x: 0.33665723, y: -0.12625343}
+  - {x: 0.34499967, y: -0.120191}
+  - {x: 0.37398294, y: -0.10422454}
+  - {x: 0.3688982, y: -0.09348766}
+  - {x: 0.4225697, y: -0.068907656}
+  - {x: 0.49266434, y: -0.016318016}
+  - {x: 0.55292094, y: 0.09896785}
+  - {x: 0.5476176, y: 0.18598774}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &5550073298500554033
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +200,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -32.57, y: 13.73, z: 0}
-  m_LocalScale: {x: 5.6766973, y: 7.0169435, z: 2.8562}
+  m_LocalScale: {x: 9.793373, y: 10.685332, z: 2.8562}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4966021336328216516}
@@ -274,7 +301,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.00000001576143, y: 0.2500001}
-  m_ConnectedAnchor: {x: -32.57, y: 15.484236}
+  m_ConnectedAnchor: {x: -118.966995, y: -18.46736}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 100
@@ -296,6 +323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body2d: {fileID: 0}
-  leftPushRange: -24
-  rightPushRange: 24
-  velocityThreshold: 750
+  leftPushRange: -250
+  rightPushRange: 250
+  velocityThreshold: 1111
