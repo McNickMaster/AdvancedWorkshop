@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 1551631232515185293}
   - component: {fileID: 6111998318562120828}
   - component: {fileID: 6121552131767716698}
+  - component: {fileID: 356477202241513545}
   m_Layer: 0
   m_Name: AxeObstacle
   m_TagString: Untagged
@@ -301,7 +302,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.00000001576143, y: 0.2500001}
-  m_ConnectedAnchor: {x: -103.012505, y: -18.45834}
+  m_ConnectedAnchor: {x: 2.7276008, y: 8.7569685}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 100
@@ -326,3 +327,48 @@ MonoBehaviour:
   leftPushRange: -250
   rightPushRange: 250
   velocityThreshold: 2000
+--- !u!61 &356477202241513545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550073298500554033}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.07, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.07, y: 0.5}
+  m_EdgeRadius: 0
