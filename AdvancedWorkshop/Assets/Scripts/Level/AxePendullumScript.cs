@@ -6,35 +6,32 @@ public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody2D body2d;
-    public float leftPushRange;
-    public float rightPushRange;
     public float velocityThreshold;
-    void Start()
+
+    public float swingTimer = 2;
+    private float currentVelocity = 0;
+
+    void Awake()
     {
         body2d = GetComponent<Rigidbody2D>();
-        body2d.angularVelocity = velocityThreshold;
+        currentVelocity = velocityThreshold;
+
+        Invoke("SwitchVelocityDirection", swingTimer);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        body2d.angularVelocity = currentVelocity;
     }
-    public void Push()
+
+    void SwitchVelocityDirection()
     {
-        if(transform.rotation.z > 0
-            && transform.rotation.z < rightPushRange
-                && (body2d.angularVelocity > 0)
-                && body2d.angularVelocity < velocityThreshold)
-                {
-            body2d.angularVelocity = velocityThreshold;
-        }
-        else if (transform.rotation.z < 0
-            && transform.rotation.z > leftPushRange
-                && (body2d.angularVelocity < 0)
-                && body2d.angularVelocity > velocityThreshold *-1)
-        {
-            body2d.angularVelocity = velocityThreshold * -1; 
-        }
+
+         currentVelocity = -1 * currentVelocity;
+        Invoke("SwitchVelocityDirection", swingTimer);
+
     }
+
+
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7985621216120148245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,8 +44,7 @@ GameObject:
   - component: {fileID: 7431334498780508178}
   - component: {fileID: 6086666880592857723}
   - component: {fileID: 8045952232972869994}
-  - component: {fileID: 2025020705205311904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Axe Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,33 +163,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5374572, y: 0.18786073}
   m_EdgeRadius: 0
---- !u!50 &2025020705205311904
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4142316110010216252}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1001 &5648766158338186629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255,9 +227,17 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5038393096708228838, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5550073298500554033, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_Name
       value: AxeObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550073298500554033, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6111998318562120828, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -266,6 +246,10 @@ PrefabInstance:
     - target: {fileID: 6111998318562120828, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 8.7569685
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121552131767716698, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 356477202241513545, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
