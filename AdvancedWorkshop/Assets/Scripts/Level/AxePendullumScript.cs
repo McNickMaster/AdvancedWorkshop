@@ -16,7 +16,11 @@ public class NewBehaviourScript : MonoBehaviour
         body2d = GetComponent<Rigidbody2D>();
         currentVelocity = velocityThreshold;
 
-        Invoke("SwitchVelocityDirection", swingTimer);
+        if(swingTimer > 0)
+        {
+            Invoke("SwitchVelocityDirection", swingTimer);
+
+        }
     }
 
     // Update is called once per frame
