@@ -12,7 +12,6 @@ public class SettingsScreen : MonoBehaviour
 
     public AudioMixer musicMixer;
     public AudioMixer sfxMixer;
-    public Dropdown resolutionDropdown;
 
     public Slider musicSlider;
     public Slider sfxSlider;
@@ -28,24 +27,6 @@ public class SettingsScreen : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        resolutionDropdown.ClearOptions();
-        List<string> options = new List<string>();
-        resolutions = Screen.resolutions;
-        int currentResolutionIndex = 0;
-
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + " x " +
-                     resolutions[i].height;
-            options.Add(option);
-            if (resolutions[i].width == Screen.currentResolution.width
-                  && resolutions[i].height == Screen.currentResolution.height)
-                currentResolutionIndex = i;
-        }
-
-
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.RefreshShownValue();
     }
 
     // Update is called once per frame
@@ -75,12 +56,6 @@ public class SettingsScreen : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width,
-                  resolution.height, Screen.fullScreen);
-    }
 
 
 
