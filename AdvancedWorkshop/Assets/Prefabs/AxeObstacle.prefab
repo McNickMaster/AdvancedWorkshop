@@ -199,14 +199,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5550073298500554033}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.57, y: 13.73, z: 0}
-  m_LocalScale: {x: 9.793373, y: 12.76379, z: 2.8562}
+  m_LocalRotation: {x: -0, y: -0, z: -0.6986909, w: 0.71542376}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 11.460479, y: 14.166255, z: 5.7662797}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4966021336328216516}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -88.644}
 --- !u!212 &2345263628980250109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.00000001576143, y: 0.2500001}
-  m_ConnectedAnchor: {x: 2.7276008, y: 8.7569685}
+  m_ConnectedAnchor: {x: 3.5405743, y: 0.08380114}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 100
@@ -324,9 +324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body2d: {fileID: 0}
-  leftPushRange: -250
-  rightPushRange: 250
   velocityThreshold: 2000
+  swingTimer: 2
 --- !u!61 &356477202241513545
 BoxCollider2D:
   m_ObjectHideFlags: 0
