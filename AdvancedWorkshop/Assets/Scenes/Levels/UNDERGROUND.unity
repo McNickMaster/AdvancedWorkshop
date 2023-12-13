@@ -13713,7 +13713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1056354679113544953, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
       propertyPath: speed
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1056354679113544953, guid: 4a4e4244af25b8f448f81e73d617bcf7, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -18593,7 +18593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 16444758754345255, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.4
+      value: 22.3
       objectReference: {fileID: 0}
     - target: {fileID: 16444758754345255, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_LocalPosition.z
