@@ -233,13 +233,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6111998318562120828, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 149.27896
+      value: 2.7276008
       objectReference: {fileID: 0}
     - target: {fileID: 6111998318562120828, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 5.8388853
+      value: 8.7569685
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 356477202241513545, guid: f1bda0b7ec93fc940a32c9fd2d591312, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
