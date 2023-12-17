@@ -14,6 +14,9 @@ public class SpawnPlayerAtPoint : MonoBehaviour
         {
             MovePlayer();
         }
+
+
+        StoplightModule.instance.Reset();
     }
 
 

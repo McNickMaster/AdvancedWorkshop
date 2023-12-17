@@ -87,7 +87,6 @@ public class PlayerMovement : MonoBehaviour
 
     void InitInputs()
     {
-
         jumpAction.performed += context => OnJumpInput(context);
         downAction.started += context => OnDownInput(context);
         downAction.canceled += context => OnDownInput(context);

@@ -235,6 +235,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb95a1b4c864294596045e38b3e0bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseAction:
+    m_Name: Pause
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9fe550e0-efd5-4dee-869a-bf0a06cde409
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 55f6653e-2639-4a1e-a0b5-ced8ca31d7b0
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pause
+      m_Flags: 0
+    - m_Name: 
+      m_Id: d3c502bb-c49a-447a-b65d-4fd6a53c1bed
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pause
+      m_Flags: 0
+    m_Flags: 0
+  pauseMenu: {fileID: 0}
 --- !u!4 &548218213
 Transform:
   m_ObjectHideFlags: 0
@@ -262,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d02bb1457bb4a34081d9d944528a2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: 0
+  firstLevel: 1
   levelOrder: 000000000100000002000000
   mainScene:
     m_Handle: 0

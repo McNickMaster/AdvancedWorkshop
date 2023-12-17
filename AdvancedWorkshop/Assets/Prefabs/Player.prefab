@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8641990385094471202}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GroundChecks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815476355895650202}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: TL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4277515770124276267}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

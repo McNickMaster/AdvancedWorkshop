@@ -6,6 +6,8 @@ public class LevelExit : MonoBehaviour
 {
     private LevelManager levelManager;
 
+    public Level nextLevel;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -21,9 +23,13 @@ public class LevelExit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.gameObject.layer.Equals(10))
         {
-            levelManager.LoadNextLevel();
+
+            Debug.Log("loading next level...");
+            levelManager.LoadNextLevel(nextLevel);
+            this.enabled = false;
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     private Vector3 lastCheckpointPosition;
+
+    public InputAction pauseAction;
+    public GameObject pauseMenu;
 
     private void Awake()
     {
@@ -16,6 +20,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        pauseAction.performed += context => Pause();
     }
 
     private void Start()
@@ -23,6 +29,17 @@ public class GameManager : MonoBehaviour
         // Initialize the last checkpoint position to the player's starting position.
         lastCheckpointPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
+
+    public void Update()
+    {
+
+    }
+
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+    }
+
 
     public void SetCheckpoint(Vector3 checkpointPosition)
     {
@@ -34,6 +51,11 @@ public class GameManager : MonoBehaviour
     {
         PlayerController.instance.SetCheckpoint(lastCheckpointPosition);
         PlayerController.instance.RespawnAtLastCheckpoint();
+    }
+
+    public void OnEnable()
+    {
+        pauseAction.Enable();
     }
 
 }

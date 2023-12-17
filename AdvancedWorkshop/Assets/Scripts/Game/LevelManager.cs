@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
 
     public Scene mainScene;
     private int currentLevelIndex = 0;
-    private Level currentLevel;
+    public Level currentLevel;
 
     // Start is called before the first frame update
     void Awake()
@@ -23,17 +23,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            LoadNextLevel();
-        }
 
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            UnloadLevel(Level.FARM);
-            currentLevelIndex = 0;
-            LoadFirstLevel();
-        }
     }
 
     void LoadFirstLevel()
@@ -46,13 +36,21 @@ public class LevelManager : MonoBehaviour
         UnloadLevel(levelOrder[currentLevelIndex]);
         currentLevelIndex++;
         LoadLevel(levelOrder[currentLevelIndex]);
+
+        //Debug.Log("index was " + (currentLevelIndex - 1) + " is now " + currentLevelIndex);
+    }
+
+    public void LoadNextLevel(Level level)
+    {
+        UnloadLevel(levelOrder[currentLevelIndex]);
+        currentLevelIndex++;
+        LoadLevel(level);
     }
 
     private void LoadLevel(Level level)
     {
         SceneManager.LoadSceneAsync(level.ToString(), LoadSceneMode.Additive);
         currentLevel = level;
-        StoplightModule.instance.Reset();
         Debug.Log(level.ToString());
     }
 
