@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b496d1ac92bcc84697282fd5b31e017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follow_strength: 0.075
+  follow_strength: 0.05
   follow_speed_mod: 15
   offset: {x: 0, y: 1, z: -10}
   shake_offset: {x: 0, y: 0, z: 0}
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f940cd5fb8f6ee4681dc43c5cb9e861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_SPEED: 6
+  MAX_SPEED: 7
   X_ACCEL: 100
   AIRBORNE_MOVE_MOD: 1.5
   MAX_Y_SPEED: 15

@@ -8,6 +8,8 @@ public class LevelExit : MonoBehaviour
 
     public Level nextLevel;
 
+    private bool flag = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -21,15 +23,15 @@ public class LevelExit : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collision.gameObject.layer.Equals(10))
+        if(collider.gameObject.layer.Equals(10) && !flag)
         {
 
             Debug.Log("loading next level...");
             levelManager.LoadNextLevel(nextLevel);
-            this.enabled = false;
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            flag = true;
         }
     }
 }

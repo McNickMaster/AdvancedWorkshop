@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public InputAction pauseAction;
     public GameObject pauseMenu;
 
+    public GameObject playerPrefab;
+
     private void Awake()
     {
         if (Instance == null)
@@ -35,9 +37,14 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void Unpause()
+    {
+        pauseMenu.SetActive(false);
+    }
+
     public void Pause()
     {
-        pauseMenu.SetActive(true);
+        pauseMenu.SetActive(!pauseMenu.active);
     }
 
 
@@ -52,6 +59,8 @@ public class GameManager : MonoBehaviour
         PlayerController.instance.SetCheckpoint(lastCheckpointPosition);
         PlayerController.instance.RespawnAtLastCheckpoint();
     }
+
+  
 
     public void OnEnable()
     {

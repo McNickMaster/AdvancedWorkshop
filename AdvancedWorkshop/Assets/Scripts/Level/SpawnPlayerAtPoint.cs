@@ -33,8 +33,13 @@ public class SpawnPlayerAtPoint : MonoBehaviour
     }
 
 
-    void MovePlayer()
+    void MovePlayer_old()
     {
         PlayerMovement.instance.transform.position = point.position;
+    }
+
+    void MovePlayer()
+    {
+        Instantiate(GameManager.Instance.playerPrefab, point.position, Quaternion.identity, null);
     }
 }
