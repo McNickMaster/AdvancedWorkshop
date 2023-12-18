@@ -47,6 +47,11 @@ public class LevelManager : MonoBehaviour
         LoadLevel(level);
     }
 
+    public void LoadLastLevel()
+    {
+        LoadLevel(Level.END);
+    }
+
     private void LoadLevel(Level level)
     {
         SceneManager.LoadSceneAsync(level.ToString(), LoadSceneMode.Additive);
@@ -63,7 +68,7 @@ public class LevelManager : MonoBehaviour
 
 public enum Level
 {
-    UNDERGROUND, FARM, PEAK
+    UNDERGROUND, FARM, PEAK, END
 
 
 }

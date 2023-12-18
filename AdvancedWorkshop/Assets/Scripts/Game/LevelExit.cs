@@ -7,7 +7,7 @@ public class LevelExit : MonoBehaviour
     private LevelManager levelManager;
 
     public Level nextLevel;
-
+    public bool last = false;
     private bool flag = false;
 
     // Start is called before the first frame update
@@ -27,9 +27,14 @@ public class LevelExit : MonoBehaviour
     {
         if(collider.gameObject.layer.Equals(10) && !flag)
         {
-
+            if(last)
+            {
+                levelManager.LoadLastLevel();
+            } else 
+            {
+                levelManager.LoadNextLevel(nextLevel);
+            }
             Debug.Log("loading next level...");
-            levelManager.LoadNextLevel(nextLevel);
             Destroy(this.gameObject);
             flag = true;
         }

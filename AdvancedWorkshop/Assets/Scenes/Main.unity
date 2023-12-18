@@ -232,11 +232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d02bb1457bb4a34081d9d944528a2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: 0
+  firstLevel: 2
   levelOrder: 000000000100000002000000
   mainScene:
     m_Handle: 0
-  currentLevel: 0
+  currentLevel: 2
 --- !u!1001 &619916679
 PrefabInstance:
   m_ObjectHideFlags: 0
