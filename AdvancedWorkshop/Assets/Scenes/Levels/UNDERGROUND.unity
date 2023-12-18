@@ -14528,8 +14528,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455280404195268446, guid: 8b76916c9edd5174bbe1ec07fb208c42, type: 3}
       propertyPath: m_text
-      value: 'Well done you made it to the first checkpoint....you will respawn here
-        if you get caught. Or perish. Continue to perserve. '
+      value: 'Well done, you made it past the first obstacles... but must continue
+        to not be caught. Evade or perish. Continue to perserve. '
       objectReference: {fileID: 0}
     - target: {fileID: 7455280404195268446, guid: 8b76916c9edd5174bbe1ec07fb208c42, type: 3}
       propertyPath: m_TextStyleHashCode
@@ -18114,7 +18114,7 @@ PrefabInstance:
     - target: {fileID: 7455280404195268446, guid: 8b76916c9edd5174bbe1ec07fb208c42, type: 3}
       propertyPath: m_text
       value: 'People are not allowed to leave the underground. They made sure of
-        that. Get past these defenses to activate this platform. '
+        that. Get past these defenses to activate the platform to your left. '
       objectReference: {fileID: 0}
     - target: {fileID: 7455280404195268446, guid: 8b76916c9edd5174bbe1ec07fb208c42, type: 3}
       propertyPath: m_fontStyle
