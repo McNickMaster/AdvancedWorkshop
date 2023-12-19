@@ -49,6 +49,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLastLevel()
     {
+        UnloadLevel(levelOrder[currentLevelIndex]);
         LoadLevel(Level.END);
     }
 
