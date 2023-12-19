@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -21,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     public float JUMP_BUFFER = 0.2f; //time to buffer the jump input
 
     public float platformModifier = 5f;
+
+    //public AudioClip jump;
+    //private AudioSource audioSource;
 
     public int groundLayer = 8; //ground layer
 
@@ -62,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+      //  audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -74,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         if(input_jump && is_grounded && can_jump)
         {
             Jump();
+           // audioSource.PlayOneShot(jump);
         }
 
         ApplyGravity();

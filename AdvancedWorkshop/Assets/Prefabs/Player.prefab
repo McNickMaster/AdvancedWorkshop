@@ -507,6 +507,7 @@ MonoBehaviour:
   COYOTE_TIME: 0.1
   JUMP_BUFFER: 0.1
   platformModifier: 5
+  jump: {fileID: 8300000, guid: 12fac77ff09af2d42a4ecbc54f1a3448, type: 3}
   groundLayer: 9
   input_jump: 0
   is_falling: 0
